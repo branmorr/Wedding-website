@@ -1,54 +1,47 @@
-# Aurora After — Wedding Website Master Skeleton
+# Aurora After Wedding Website Master V2
 
-A design-neutral, reusable wedding website architecture. The purpose is to lock the *bones* once, then duplicate and reskin it into many visual collections.
+This is the reusable, design-neutral product backbone for Aurora After's wedding website templates.
 
-## How to preview
-Open `index.html` in any browser. No build tools or dependencies are required.
+## Product architecture
 
-## How to use on GitHub
-Upload this folder to a repository. It is plain HTML/CSS and can be served directly with GitHub Pages.
-
-## Architecture
-1. Sticky navigation + RSVP CTA
-2. Hero / cover
-3. Invitation
+### Core sections — always included
+1. Hero / Cover
+2. Invitation
+3. Countdown
 4. Our Story
 5. Wedding Details
-6. Weekend Schedule (modular: weekend or single-day)
-7. Venue
-8. Travel & Stay
-9. Things To Do (optional)
-10. Dress Code (optional)
-11. Wedding Party (optional)
-12. Gallery (optional)
-13. Registry
-14. FAQ
-15. RSVP
-16. Contact person
-17. Footer / final CTA
+6. Wedding-Day Timeline
+7. Venue + Map
+8. RSVP
+9. Contact
+10. Closing
 
-## Reusable skin rule
-Do not change the information architecture when creating a new aesthetic unless testing shows a real usability reason. Change:
-- typography
-- palette
-- imagery
-- decorative assets
-- borders/shapes/textures
-- section background treatments
-- photo crops
+### Optional modules — buyer can delete if not needed
+- Weekend Events
+- Travel & Stay
+- Transportation / Shuttle
+- Dress Code
+- Wedding Party
+- Things To Do
+- Food & Bar
+- Gallery
+- Registry
+- FAQ
 
-Keep the content hierarchy and functional modules stable.
+## Why this structure
+The master is deliberately modular. A finished aesthetic should be a visual "skin" placed over the same bones. Buyers should not need to use every module.
 
-## Modular variants to maintain
-- Schedule: wedding day / full weekend / destination itinerary
-- Story: text + photo / timeline / photo-forward
-- Stay: one hotel / multiple hotels / general accommodations
-- Dress: text only / palette / inspiration imagery
-- Gallery: 3 / 6 / editorial collage
-- RSVP: local wedding / multi-event / destination
+The GitHub demo includes an internal **Master controls** button that toggles optional modules on/off. This simulates what the buyer would do by deleting or keeping sections inside Canva.
 
-## RSVP production note
-The prototype uses a placeholder button. In a Canva product, the buyer can link to or embed an RSVP form. Keep the form provider flexible so the visual template is not coupled to one service.
+The customer-facing Canva version should NOT show these controls. It should simply include all optional modules, clearly grouped so the buyer can delete the ones that do not apply.
 
-## Design principle
-This file intentionally looks neutral. It is the master product architecture, not the final aesthetic. Design skins should be created only after the skeleton has been tested on desktop and mobile.
+## Navigation
+Desktop: core links + a **More** dropdown containing optional modules.
+Mobile: compact navigation with the More dropdown and RSVP.
+
+## Next production step
+After the architecture is approved, recreate this master in Canva as the neutral master template. Freeze the section order, spacing rules, responsive considerations, button system, and module library. Duplicate that master for each new visual trend/aesthetic.
+
+## GitHub Pages
+Upload `index.html` to the repository root, then use:
+Settings → Pages → Deploy from branch → main → /(root)
